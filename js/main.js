@@ -14,10 +14,10 @@
 	------------------------------------------------------ */ 
    $(window).load(function() {
       // will first fade out the loading animation 
-    	$("#loader1").fadeOut(1000, function(){
+    	$("#loader1").fadeOut(600, function(){
 
         // will fade out the whole DIV that covers the website.
-        $("#preloader").delay(50).fadeOut("fast");
+        $("#preloader").delay(40).fadeOut("fast");
 
       }); 
   	})
