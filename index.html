@@ -1,313 +1,557 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-	<meta charset="utf-8">
+<html>
+<head>
 	<title>Infinity</title>
-	<meta name="description" content="">  
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href="css/base.css">  
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/vendor.css">
-
-	<script src="js/modernizr.js"></script>
-	<link rel="icon" type="image/png" href="favicon.png">
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:100&amp;display=swap'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
 	<style>
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  margin: -1px;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  border: 0;
-  overflow: hidden;
-}
+		body {
+		  margin: 0;
+		}
+     @import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
 
-.page-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: #FFFFFF;
-  transition: background-color 200ms;
-}
+  * {
+    box-sizing: border-box;
+  }
+  #testx{
+    display: flex;
+  }
+  #divf{
+    flex: 1;
+  }
+  #divl{
+    flex: 1;
+  }
+  #divy {
+    
+    min-height: 100vh;
+    font-family: 'Fira Sans', sans-serif;
+    display: flex;
+    margin: 0;
+    flex:5;
+  }
 
-.checkbox.theme-toggle__checkbox:checked + label:after {
-  -webkit-transform: translateX(22px);
-          transform: translateX(22px);
-}
-.checkbox.outline-toggle__checkbox:checked + label:after {
-  -webkit-transform: translateX(22px);
-          transform: translateX(22px);
-}
+  .blog-slider {
+    width: 95%;
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+    padding: 25px;
+    border-radius: 25px;
+    height: 400px;
+    transition: all .3s;
+  }
+  @media screen and (max-width: 992px) {
+    .blog-slider {
+      max-width: 680px;
+      height: 400px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .blog-slider {
+      min-height: 500px;
+      height: auto;
+      margin: 180px auto;
+    }
+  }
+  @media screen and (max-height: 500px) and (min-width: 992px) {
+    .blog-slider {
+      height: 350px;
+    }
+  }
+  .blog-slider__item {
+    display: flex;
+    align-items: center;
+  }
+  @media screen and (max-width: 768px) {
+    .blog-slider__item {
+      flex-direction: column;
+    }
+  }
+  .blog-slider__item.swiper-slide-active .blog-slider__img img {
+    opacity: 1;
+    transition-delay: .3s;
+  }
+  .blog-slider__item.swiper-slide-active .blog-slider__content > * {
+    opacity: 1;
+    transform: none;
+  }
+  .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(1) {
+    transition-delay: 0.3s;
+  }
+  .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(2) {
+    transition-delay: 0.4s;
+  }
+  .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(3) {
+    transition-delay: 0.5s;
+  }
+  .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(4) {
+    transition-delay: 0.6s;
+  }
+  .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(5) {
+    transition-delay: 0.7s;
+  }
+  .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(6) {
+    transition-delay: 0.8s;
+  }
+  .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(7) {
+    transition-delay: 0.9s;
+  }
+  .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(8) {
+    transition-delay: 1s;
+  }
+  .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(9) {
+    transition-delay: 1.1s;
+  }
+  .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(10) {
+    transition-delay: 1.2s;
+  }
+  .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(11) {
+    transition-delay: 1.3s;
+  }
+  .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(12) {
+    transition-delay: 1.4s;
+  }
+  .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(13) {
+    transition-delay: 1.5s;
+  }
+  .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(14) {
+    transition-delay: 1.6s;
+  }
+  .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(15) {
+    transition-delay: 1.7s;
+  }
+  .blog-slider__img {
+    width: 300px;
+    flex-shrink: 0;
+    height: 300px;
+    background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+    box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
+    border-radius: 20px;
+    transform: translateX(-80px);
+    overflow: hidden;
+  }
+  .blog-slider__img:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+    border-radius: 20px;
+    opacity: 0.8;
+  }
+  .blog-slider__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0;
+    border-radius: 20px;
+    transition: all .3s;
+  }
+  @media screen and (max-width: 768px) {
+    .blog-slider__img {
+      transform: translateY(-50%);
+      width: 90%;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .blog-slider__img {
+      width: 95%;
+    }
+  }
+  @media screen and (max-height: 500px) and (min-width: 992px) {
+    .blog-slider__img {
+      height: 270px;
+    }
+  }
+  .blog-slider__content {
+    padding-right: 25px;
+  }
+  @media screen and (max-width: 768px) {
+    .blog-slider__content {
+      margin-top: -80px;
+      text-align: center;
+      padding: 0 30px;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .blog-slider__content {
+      padding: 0;
+    }
+  }
+  .blog-slider__content > * {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all .4s;
+  }
+  .blog-slider__code {
+    color: #7b7992;
+    margin-bottom: 15px;
+    display: block;
+    font-weight: 500;
+  }
+  .blog-slider__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0d0925;
+    margin-bottom: 20px;
+  }
+  .blog-slider__text {
+    color: #4e4a67;
+    margin-bottom: 30px;
+    line-height: 1.5em;
+  }
+  .blog-slider__button {
+    display: inline-flex;
+    background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+    padding: 15px 35px;
+    border-radius: 50px;
+    color: #fff;
+    box-shadow: 0px 14px 80px rgba(252, 56, 56, 0.4);
+    text-decoration: none;
+    font-weight: 500;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  @media screen and (max-width: 576px) {
+    .blog-slider__button {
+      width: 100%;
+    }
+  }
+  .blog-slider .swiper-container-horizontal > .swiper-pagination-bullets, .blog-slider .swiper-pagination-custom, .blog-slider .swiper-pagination-fraction {
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+  }
+  .blog-slider__pagination {
+    position: absolute;
+    z-index: 21;
+    right: 20px;
+    width: 11px !important;
+    text-align: center;
+    left: auto !important;
+    top: 50%;
+    bottom: auto !important;
+    transform: translateY(-50%);
+  }
+  @media screen and (max-width: 768px) {
+    .blog-slider__pagination {
+      transform: translateX(-50%);
+      left: 50% !important;
+      top: 205px;
+      width: 100% !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 8px 0;
+  }
+  @media screen and (max-width: 768px) {
+    .blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 0 5px;
+    }
+  }
+  .blog-slider__pagination .swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    display: block;
+    border-radius: 10px;
+    background: #062744;
+    opacity: 0.2;
+    transition: all .3s;
+  }
+  .blog-slider__pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #fd3838;
+    height: 30px;
+    box-shadow: 0px 0px 20px rgba(252, 56, 56, 0.3);
+  }
+  @media screen and (max-width: 768px) {
+    .blog-slider__pagination .swiper-pagination-bullet-active {
+      height: 11px;
+      width: 30px;
+    }
+    #textx{
+      color:white;
+    }
+  }
+		#divx::before {
+		  content: '';
+		  background: -webkit-linear-gradient(45deg, #ec0d0d, #ff9e00 80%);
+  		  -webkit-background-clip: text;
+  		  -webkit-text-fill-color: transparent;
+  		  /*text-shadow: 10px 10px 20px #000dff;*/
+		  position: absolute;
+		  z-index: 10;
+		  top: 50%;
+		  left: 50%;
+		  -webkit-transform: translate(-50%, -50%);
+		          transform: translate(-50%, -50%);
+		  font-family: 'Montserrat', sans-serif;
+		  font-weight: bold;
+		  text-transform: uppercase;
+		  letter-spacing: 0.7em;
+		  mix-blend-mode: difference;
 
-.theme-toggle__checkbox:checked ~ label {
-  color: #4c4f59;
-}
-.theme-toggle__checkbox:checked ~ label:before {
-  background-color: #292a30;
-}
-.theme-toggle__checkbox:checked ~ label:before, .theme-toggle__checkbox:checked ~ label:after {
-  border-color: #4c4f59;
-}
-.theme-toggle__checkbox:checked ~ main {
-  background-color: #1D1E22;
-}
-.theme-toggle__checkbox:checked ~ main .infinity__outline {
-  stroke: #111214;
-}
-
-.outline-toggle__checkbox:checked ~ main .infinity__outline {
-  opacity: 0;
-}
-
-.label {
-  position: absolute;
-  left: 1rem;
-  padding: 8px 0 0 60px;
-  font-family: "Helvetica", sans-serif;
-  font-size: 0.85rem;
-  color: #636775;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  transition: color 200ms;
-}
-.label.theme-toggle__label {
-  top: 1rem;
-}
-.label.outline-toggle__label {
-  top: 3.5rem;
-}
-.label:before, .label:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50px;
-  height: 28px;
-  background-color: #fafafa;
-  border: 1px solid #d9d9d9;
-  border-radius: 360px;
-  transition: background-color 200ms, -webkit-transform 200ms;
-  transition: background-color 200ms, transform 200ms;
-  transition: background-color 200ms, transform 200ms, -webkit-transform 200ms;
-}
-.label:after {
-  top: 2px;
-  left: 2px;
-  width: 24px;
-  height: 24px;
-  background-color: #FFFFFF;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 4px;
-}
-
-.infinity {
-  position: absolute;
-  width: 100%;
-  max-width: 800px;
-}
-.infinity path {
-  fill: none;
-  stroke-width: 10;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-}
-
-.infinity__outline {
-  stroke: #f2f2f2;
-  -webkit-animation: hover 4000ms linear infinite;
-          animation: hover 4000ms linear infinite;
-  transition: opacity 600ms;
-}
-
-.infinity__tracer {
-  stroke-linecap: round;
-  opacity: 0.8;
-  animation: tracer 1000ms linear reverse infinite;
-}
-.infinity__tracer--1 {
-  stroke: #F38181;
-  -webkit-animation-duration: 6000ms;
-          animation-duration: 6000ms;
-  -webkit-animation-delay: -3960ms;
-          animation-delay: -3960ms;
-}
-.infinity__tracer--2 {
-  stroke: #FCE38A;
-  -webkit-animation-duration: 3000ms;
-          animation-duration: 3000ms;
-  -webkit-animation-delay: -1980ms;
-          animation-delay: -1980ms;
-}
-.infinity__tracer--3 {
-  stroke: #E23E57;
-  -webkit-animation-duration: 2000ms;
-          animation-duration: 2000ms;
-  -webkit-animation-delay: -1320ms;
-          animation-delay: -1320ms;
-}
-.infinity__tracer--4 {
-  stroke: #95E1D3;
-  -webkit-animation-duration: 1500ms;
-          animation-duration: 1500ms;
-  -webkit-animation-delay: -990ms;
-          animation-delay: -990ms;
-}
-.infinity__tracer--5 {
-  stroke: #FFC4D0;
-  -webkit-animation-duration: 1200ms;
-          animation-duration: 1200ms;
-  -webkit-animation-delay: -792ms;
-          animation-delay: -792ms;
-}
-.infinity__tracer--6 {
-  stroke: #00DFFC;
-  -webkit-animation-duration: 1000ms;
-          animation-duration: 1000ms;
-  -webkit-animation-delay: -660ms;
-          animation-delay: -660ms;
-}
-
-@-webkit-keyframes tracer {
-  0% {
-    stroke-dasharray: 0, 260;
-    stroke-dashoffset: -234;
-  }
-  25% {
-    -webkit-transform: translate(-2px, 2px);
-            transform: translate(-2px, 2px);
-  }
-  50% {
-    stroke-dasharray: 43.3333333333, 260;
-    stroke-dashoffset: -78;
-  }
-  65% {
-    -webkit-transform: translateX(2px, -2px);
-            transform: translateX(2px, -2px);
-  }
-  100% {
-    stroke-dasharray: 4, 260;
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes tracer {
-  0% {
-    stroke-dasharray: 0, 260;
-    stroke-dashoffset: -234;
-  }
-  25% {
-    -webkit-transform: translate(-2px, 2px);
-            transform: translate(-2px, 2px);
-  }
-  50% {
-    stroke-dasharray: 43.3333333333, 260;
-    stroke-dashoffset: -78;
-  }
-  65% {
-    -webkit-transform: translateX(2px, -2px);
-            transform: translateX(2px, -2px);
-  }
-  100% {
-    stroke-dasharray: 4, 260;
-    stroke-dashoffset: 0;
-  }
-}
-@-webkit-keyframes hover {
-  50% {
-    -webkit-transform: translateY(2px) scale(1.02);
-            transform: translateY(2px) scale(1.02);
-  }
-}
-@keyframes hover {
-  50% {
-    -webkit-transform: translateY(2px) scale(1.02);
-            transform: translateY(2px) scale(1.02);
-  }
-}
-</style>
-<script>
-  window.console = window.console || function(t) {};
-</script>
-<script>
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
-  }
-</script>
-
+		  font-size: 400%;
+		  text-align: center;
+		}
+		#textx{
+      color:white;
+      /*background: -webkit-linear-gradient(45deg, #ec0d0d, #ff9e00 80%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        /*text-shadow: 10px 10px 20px #000dff;*/
+      position: absolute;
+      z-index: 10;
+      
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.7em;
+      mix-blend-mode: difference;
+      width: 70%;
+      font-size: 400%;
+      text-align: center;
+    }
+		</style>
+	<script>
+	  window.console = window.console || function(t) {};
+	</script>
+	<script>
+	  if (document.location.search.match(/type=embed/gi)) {
+	    window.parent.postMessage("resize", "*");
+	  }
+	</script>
 </head>
+<body>
+  <section>
+    <div id="textx">Infinity</div>
+    <div id="divx">
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-30d18ea41045577cdb11c797602d08e0b9c2fa407c8b81058b1c422053ad8041.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.min.js'></script>
+    <script id="rendered-js">
+      console.clear();
+      /*--------------------
+                       Utils
+                       --------------------*/
+      const deg = a => Math.PI / 180 * a;
+      const randomness = () => Math.floor(40 + Math.random() * 1080) * Math.round(Math.random());
 
-<body id="top">
-   <header>
 
-   	<div class="row">
-   		<div class="logo">
-	         <a href="index.html">Infinity</a>
-	      </div> 
 
-			<div class="social-links">
-			   <ul>
-					<li><a href="https://www.facebook.com/psginfinity/"><i class="fa fa-facebook"></i></a></li>			   
-				   <li><a href="https://www.instagram.com/infinity_psg_2020/"><i class="fa fa-instagram"></i></a></li> 				     			
-				</ul>
-			</div>
-   	</div> 
 
-   </header>
-   <section id="home" class="home-particles">
-   	<div class="shadow-overlay"></div>
+      const Points = [];
+      let rotation = 0;
+      let newRotation = Math.random() * 360;
+      function setup() {
+        var c= createCanvas(windowWidth, windowHeight);
+        c.parent('divx')
+        for (let i = 0; i < 180; i += 1) {if (window.CP.shouldStopExecution(0)) break;
+          Points.push({
+            ox: 0,
+            oy: 0,
+            x: 0,
+            y: 0 });
 
-   	<div class="content-wrap-table">		   
+        }window.CP.exitedLoop(0);
 
-		   <div class="main-content-tablecell">
+        createLines();
+      }
 
-		   	<div class="row">
-		   		<div class="col-twelve">
 
-		   			<div id="counter">
-		   				<div class="half">
-		   					<span>334 <sup>days</sup></span> 
-		 						<span>23 <sup>hours</sup></span>
-		   				</div>
-							<div class="half">
-								<span>50 <sup>mins</sup></span>
-		 						<span>33 <sup>secs</sup></span>
-		 					</div> 
-		   			</div>
+      /*--------------------
+        Lines
+        --------------------*/
+      function createLines() {
+        const radius = Math.min(250, window.innerWidth * 0.50);
+        const increment = 2;
+        newRotation = rotation + 45;
+        const r1 = randomness();
+        const r2 = randomness();
+        const r3 = randomness();
+        const r4 = r1 !== 0 && r2 !== 0 && r3 !== 0 ? randomness() : Math.random() * 360;
+        for (let i = 0; i < 180; i += increment) {if (window.CP.shouldStopExecution(1)) break;
+          const x1 = radius * sin(deg(i + r1));
+          const y1 = radius * cos(deg(i + r2));
+          Points[i].x = x1;
+          Points[i].y = y1;
+          const x2 = radius * sin(deg(i + r3));
+          const y2 = radius * cos(deg(i + r4));
+          Points[i + 1].x = x2;
+          Points[i + 1].y = y2;
+        }window.CP.exitedLoop(1);
+      }
 
-			  			<div class="bottom-text">
-			  				<h1>Our site is launching soon.</h1>			  				
-			  			</div>			  						  			   			
 
-			   	</div> 
-		   	</div>
-			
-		   </div>  
-		</div> 
-   </section>
+      /*--------------------
+        Redraw
+        --------------------*/
+      function mousePressed() {
+        createLines();
+      }
+      function touchStarted() {
+        createLines();
+      }
 
-   <div id="preloader"> 
-		<div id="loader1">
-			<main class="page-content" style="background-color:#000000;">
-<svg class="infinity" version="1.1" x="0px" y="0px" viewBox="0 0 187.3 93.7" preserveAspectRatio="xMidyMid" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<path class="infinity__outline" style="opacity: 0;color: white" d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
-<path class="infinity__tracer infinity__tracer--1" d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
-<path class="infinity__tracer infinity__tracer--2" d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
-<path class="infinity__tracer infinity__tracer--3" d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
-<path class="infinity__tracer infinity__tracer--4" d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
-<path class="infinity__tracer infinity__tracer--5" d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
-<path class="infinity__tracer infinity__tracer--6" d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
-</svg>
-</main>
 
-		</div>    	
-   </div> 
-   <script src="js/jquery-2.1.3.min.js"></script>
-   <script src="js/plugins.js"></script>
-   <script src="js/main.js"></script>
+      /*--------------------
+        Draw Lines
+        --------------------*/
+      function drawLines(clock) {
+        const smooth = 0.06;
+        const stagger = 0.0005;
+        for (let i = 0; i < Points.length; i += 2) {if (window.CP.shouldStopExecution(2)) break;
+          stroke(255, i * 0.4);
+          Points[i].ox = lerp(Points[i].ox, Points[i].x, smooth + i * stagger);
+          Points[i].oy = lerp(Points[i].oy, Points[i].y, smooth + i * stagger);
+          Points[i + 1].ox = lerp(Points[i + 1].ox, Points[i + 1].x, smooth + i * stagger);
+          Points[i + 1].oy = lerp(Points[i + 1].oy, Points[i + 1].y, smooth + i * stagger);
+          const x = lerp(Points[i].ox, Points[i + 1].ox, .3);
+          const y = lerp(Points[i].oy, Points[i + 1].oy, .7);
+          bezier(Points[i].ox*1.5, Points[i].oy*1.5, y*1.5, x*1.5, x*1.5, y*1.5, Points[i + 1].ox*1.5, Points[i + 1].oy*1.5);
+        }window.CP.exitedLoop(2);
+      }
+
+      let time;
+      function draw() {
+        time += 0.005;
+        background(0);
+        strokeWeight(1);
+        noFill();
+        translate(width / 2, height / 2);
+        rotation = lerp(rotation, newRotation, smooth);
+        rotate(deg(rotation));
+        drawLines(time);
+      }
+
+
+      /*--------------------
+        Resize
+        --------------------*/
+      function windowResized() {
+        resizeCanvas(windowWidth, windowHeight);
+      }
+
+      setTimeout(createLines, 1500);
+      //# sourceURL=pen.js
+    </script>
+    
+  </div>
+</section>
+<section>
+<div id="testx">
+  <div id="divf"></div>
+  <div id='divy' align="center">
+    <div class="blog-slider">
+<div class="blog-slider__wrp swiper-wrapper">
+<div class="blog-slider__item swiper-slide">
+<div class="blog-slider__img">
+<img src="image/prozone.jpg" alt="">
+</div>
+<div class="blog-slider__content">
+<span class="blog-slider__code">PROZONE</span>
+<div class="blog-slider__title">FOR EVERY BIT OF CODER IN YOU!</div>
+<div class="blog-slider__text">Round 1: 13th February 4:45pm to 5.30pm <br>Round 2 and 3: 15th February 10am to 12.30pm
+ </div>
+<a href="#" class="blog-slider__button">READ MORE</a>
+</div>
+</div>
+<div class="blog-slider__item swiper-slide">
+<div class="blog-slider__img">
+<img src="image/inkling.jpg" alt="">
+</div>
+<div class="blog-slider__content">
+<span class="blog-slider__code">INKLING</span>
+<div class="blog-slider__title">Unlock knowledge at the speed of thoughts</div>
+<div class="blog-slider__text"> </div>
+<a href="#" class="blog-slider__button">READ MORE</a>
+</div>
+</div>
+<div class="blog-slider__item swiper-slide">
+<div class="blog-slider__img">
+<img src="image/incognito.jpg" alt="">
+</div>
+<div class="blog-slider__content">
+<span class="blog-slider__code">INCOGNITO</span>
+<div class="blog-slider__title">Beat the clock and tear the cloak</div>
+<div class="blog-slider__text">Round 1: 7th February 4:45PM to 5:45PM.<br>Round 2: 8th February 9:15AM to 10:00AM.
+</div>
+<a href="#" class="blog-slider__button">READ MORE</a>
+</div>
+</div><div class="blog-slider__item swiper-slide">
+<div class="blog-slider__img">
+<img src="image/Fuzzle-buzzle.jpg" alt="">
+</div>
+<div class="blog-slider__content">
+<span class="blog-slider__code">FUZZLE BUZZLE</span>
+<div class="blog-slider__title">Make your skills win over the running clock!</div>
+<div class="blog-slider__text">14th Feburary 9am to 12 am</div>
+<a href="#" class="blog-slider__button">READ MORE</a>
+</div>
+</div><div class="blog-slider__item swiper-slide">
+<div class="blog-slider__img">
+<img src="image/gamoholix.jpg" alt="">
+</div>
+<div class="blog-slider__content">
+<span class="blog-slider__code">GAMOHOLIX</span>
+<div class="blog-slider__title">It’s not how big you are that matters… It’s how big you play.</div>
+<div class="blog-slider__text"> </div>
+<a href="#" class="blog-slider__button">READ MORE</a>
+</div>
+</div>
+<div class="blog-slider__item swiper-slide">
+<div class="blog-slider__img">
+<img src="image/Tech hunt.jpg" alt="">
+</div>
+<div class="blog-slider__content">
+<span class="blog-slider__code">TECH RUSH</span>
+<div class="blog-slider__title">You don’t have much to think Scan between every blink
+</div>
+<div class="blog-slider__text"> </div>
+<a href="#" class="blog-slider__button">READ MORE</a>
+</div>
+</div>
+</div>
+<div class="blog-slider__pagination"></div>
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-9bf952ccbbd13c245169a0a1190323a27ce073a3d304b8c0fdf421ab22794a58.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
+<script id="rendered-js">
+var swiper = new Swiper('.blog-slider', {
+  spaceBetween: 30,
+  effect: 'fade',
+  loop: true,
+  mousewheel: {
+    invert: false },
+
+  // autoHeight: true,
+  pagination: {
+    el: '.blog-slider__pagination',
+    clickable: true } });
+//# sourceURL=pen.js
+    </script>
+<script src="https://static.codepen.io/assets/editor/iframe/iframeRefreshCSS-8a264da60d1f38eaa58c8243fe0ad6a782e98673c75eb542ccf03bc0efbfe2de.js"></script>
+  </div>
+  <div id="divl"></div>
+</div>
+</section>
 </body>
 </html>
