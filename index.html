@@ -20,16 +20,21 @@
       box-sizing: border-box;
     }
 
-    #testx {
-      display: flex;
+
+    @media only screen and (max-width: 774px) {
+      #testx {
+        float: left;
+        left: 12%;
+        position: relative;
+      }
     }
 
-    #divf {
-      flex: 1;
-    }
-
-    #divl {
-      flex: 1;
+    @media only screen and (max-width: 360px) {
+      #testx {
+        float: left;
+        left: 10%;
+        position: relative;
+      }
     }
 
     #divy {
@@ -38,7 +43,7 @@
       font-family: 'Fira Sans', sans-serif;
       display: flex;
       margin: 0;
-      flex: 5;
+
     }
 
     .blog-slider {
@@ -403,30 +408,9 @@
       }
     }
 
-    #divx::before {
-      content: '';
-      background: -webkit-linear-gradient(45deg, #ec0d0d, #ff9e00 80%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      /*text-shadow: 10px 10px 20px #000dff;*/
-      position: absolute;
-      z-index: 10;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      font-family: 'Montserrat', sans-serif;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 0.7em;
-      mix-blend-mode: difference;
 
-      font-size: 400%;
-      text-align: center;
-    }
 
     #textx {
-      color: white;
       /*background: -webkit-linear-gradient(45deg, #ec0d0d, #ff9e00 80%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -517,12 +501,13 @@
     <div>
       <?xml version="1.0" encoding="utf-8"?>
       <!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+      <?xml version="1.0" encoding="utf-8"?>
+      <!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
       <svg version="1.1" id="textx" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
         x="0px" y="0px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
         <style type="text/css">
           .st0 {
-
-            stroke: white;
+            stroke: #ffffff;
             stroke-width: 6;
             stroke-linecap: round;
             stroke-miterlimit: 10;
@@ -534,23 +519,24 @@
         </style>
         <g>
           <g>
-            <path class="st0" d="M529.67,441.86v167.08h-23.75V441.86H529.67z" />
-            <path class="st0" d="M576.22,608.94V441.86h25.98l58.61,84.44c13.37,19.6,24,37.16,32.64,54.41l0.6-0.26
-			c-2.15-22.3-2.57-42.68-2.57-68.56v-70.03h22.25v167.08h-24l-58.15-84.69c-12.6-18.72-24.9-37.78-34.04-55.94l-0.81,0.26
-			c1.41,21.17,1.74,41.31,1.74,68.93v71.44H576.22z" />
-            <path class="st0" d="M760.27,441.86h98.54v17.98h-74.78v55.63h69.1v17.86h-69.1v75.61h-23.75V441.86z" />
-            <path class="st0" d="M921.65,441.86v167.08H897.9V441.86H921.65z" />
-            <path class="st0" d="M968.21,608.94V441.86h25.98l58.61,84.44c13.37,19.6,24,37.16,32.64,54.41l0.6-0.26
-			c-2.15-22.3-2.57-42.68-2.57-68.56v-70.03h22.25v167.08h-24l-58.15-84.69c-12.6-18.72-24.9-37.78-34.04-55.94l-0.81,0.26
-			c1.41,21.17,1.74,41.31,1.74,68.93v71.44H968.21z" />
-            <path class="st0" d="M1176.01,441.86v167.08h-23.75V441.86H1176.01z" />
-            <path class="st0" d="M1257.48,460.09h-55.73v-18.23h135.48v18.23h-56v148.85h-23.75V460.09z" />
-            <path class="st0" d="M1403.83,608.94v-70.83l-58.02-96.25h27.06l25.69,46.15c6.97,12.67,12.57,22.78,18.19,34.48h0.54
-			c5.04-10.99,11.29-21.93,18.36-34.61l26.39-46.02h26.77l-61.23,95.92v71.16H1403.83z" />
+            <path class="st0" d="M479.12,453.28v170.73h-26.91V453.28H479.12z" />
+            <path class="st0" d="M528.16,624.02V453.28h29.43l66.39,86.29c15.15,20.03,27.19,37.97,36.98,55.59l0.68-0.27
+			c-2.43-22.79-2.92-43.61-2.92-70.06v-71.56h25.21v170.73h-27.19l-65.88-86.54c-14.27-19.13-28.21-38.6-38.56-57.17l-0.92,0.27
+			c1.6,21.63,1.97,42.21,1.97,70.43v73.01H528.16z" />
+            <path class="st0" d="M732.96,453.28h111.63v18.37h-84.72v56.85h78.28v18.25h-78.28v77.26h-26.91V453.28z" />
+            <path class="st0" d="M912.08,453.28v170.73h-26.91V453.28H912.08z" />
+            <path class="st0" d="M961.12,624.02V453.28h29.43l66.39,86.29c15.15,20.03,27.19,37.97,36.98,55.59l0.68-0.27
+			c-2.43-22.79-2.92-43.61-2.92-70.06v-71.56h25.21v170.73h-27.19l-65.88-86.54c-14.27-19.13-28.21-38.6-38.56-57.17l-0.92,0.27
+			c1.6,21.63,1.97,42.21,1.97,70.43v73.01H961.12z" />
+            <path class="st0" d="M1192.83,453.28v170.73h-26.91V453.28H1192.83z" />
+            <path class="st0" d="M1281.43,471.91h-63.14v-18.63h153.48v18.63h-63.44v152.1h-26.91V471.91z" />
+            <path class="st0" d="M1443.53,624.02v-72.37l-65.72-98.36h30.65l29.11,47.16c7.89,12.94,14.24,23.28,20.6,35.23h0.61
+			c5.71-11.23,12.79-22.41,20.79-35.36l29.89-47.03h30.33l-69.36,98.02v72.71H1443.53z" />
           </g>
         </g>
         <rect x="1604.2" y="374.87" class="st1" width="2.82" height="1.41" />
       </svg>
+
 
     </div>
     <div id="divx">
@@ -672,8 +658,7 @@
   </section>
   <section>
     <div id="testx">
-      <div id="divf"></div>
-      <div id='divy' align="center">
+      <div id='divy'>
         <div class="blog-slider">
           <div class="blog-slider__wrp swiper-wrapper">
             <div class="blog-slider__item swiper-slide">
@@ -769,14 +754,15 @@
               clickable: true
             }
           });
-//# sourceURL=pen.js
+    //# sourceURL=pen.js
         </script>
         <script
           src="https://static.codepen.io/assets/editor/iframe/iframeRefreshCSS-8a264da60d1f38eaa58c8243fe0ad6a782e98673c75eb542ccf03bc0efbfe2de.js"></script>
       </div>
-      <div id="divl"></div>
+
     </div>
   </section>
+
 </body>
 
 </html>
