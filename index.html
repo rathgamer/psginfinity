@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+	<!--- basic page needs
+   ================================================== -->
+	<meta charset="utf-8">
+	<title>Infinity</title>
+	<meta name="description" content="infinity psg tech event">
+	<meta name="author" content="infinity psgtech">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/vendor.css">
+
+	<!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+
+	<!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.png">
+
+	<style>
+	div.gallery {
+  margin: 0px;
+  border: 0px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+	.flex-container {
+  display: flex;
+  background-color: black;
+}
+
+.flex-container > div {
+  background-color: black;
+  margin: 0px;
+  padding: 5px;
+  font-size: 30px;
+}
+		.item-content h3 {
+			color: #ffffff;
+		}
+
+		p {
+			color: #ffffff;
+		}
+
+		#textx {
+			fill: rgb(24, 24, 24);
+			animation: fillx 5s ease forwards 0s infinite;
+		}
+
+		#textx path:nth-child(1) {
+			stroke-dasharray: 381;
+			stroke-dashoffset: 381;
+			animation: lineanimation 2s ease forwards 3s infinite;
+		}
+
+		#textx path:nth-child(2) {
+			stroke-dasharray: 1043;
+			stroke-dashoffset: 1043;
+			animation: lineanimation 2s ease forwards 0.3s infinite;
+		}
+
+		#textx path:nth-child(3) {
+			stroke-dasharray: 669;
+			stroke-dashoffset: 669;
+			animation: lineanimation 2s ease forwards 0.6s infinite;
+		}
+
+		#textx path:nth-child(4) {
+			stroke-dasharray: 381;
+			stroke-dashoffset: 381;
+			animation: lineanimation 2s ease forwards 0.9s infinite;
+		}
+
+		#textx path:nth-child(5) {
+			stroke-dasharray: 1043;
+			stroke-dashoffset: 1043;
+			animation: lineanimation 2s ease forwards 1.2s infinite;
+		}
+
+		#textx path:nth-child(6) {
+			stroke-dasharray: 381;
+			stroke-dashoffset: 381;
+			animation: lineanimation 2s ease forwards 1.5s infinite;
+		}
+
+		#textx path:nth-child(7) {
+			stroke-dasharray: 605;
+			stroke-dashoffset: 605;
+			animation: lineanimation 2s ease forwards 1.8s infinite;
+		}
+
+		#textx path:nth-child(8) {
+			stroke-dasharray: 630;
+			stroke-dashoffset: 630;
+			animation: lineanimation 2s ease forwards 2.1s infinite;
+		}
+
+
+
+		@keyframes lineanimation {
+			to {
+				stroke-dashoffset: 0;
+			}
+		}
+
+		@keyframes fillx {
+			to {
+				fill: white;
+			}
+		}
+		@media only screen and (max-width:10000px) and (min-width: 769px)
+		{
+			#media
+			{
+				margin-top: 30px;
+				width: 250px;
+				height: 100px;
+			}
+		}
+		@media only screen and (max-width:768px) and (min-width: 600px)
+		{
+			#media
+			{
+				margin-top: 20px;
+				width: 250px;
+				height: 100px;
+			}
+		}
+		@media only screen and (max-width:600px) and (min-width: 380px)
+		{
+			#media
+			{
+				margin-top: 20px;
+				width: 190px;
+				height: 80px;
+			}
+		}
+		@media only screen and (max-width:380px) and (min-width: 240px)
+		{
+			#media
+			{
+				margin-top: 25px;
+				width: 150px;
+				height: 60px;
+			}
+		}
+		
+		@media only screen and (max-width:240px) and (min-width: 0px)
+		{
+			#media
+			{
+				margin-top: 35px;
+				width: 10vh;
+				height: 5vh;
+			}
+		}
+		.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+.page-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #FFFFFF;
+  transition: background-color 200ms;
+}
+
+.checkbox.theme-toggle__checkbox:checked + label:after {
+  -webkit-transform: translateX(22px);
+          transform: translateX(22px);
+}
+.checkbox.outline-toggle__checkbox:checked + label:after {
+  -webkit-transform: translateX(22px);
+          transform: translateX(22px);
+}
+
+.theme-toggle__checkbox:checked ~ label {
+  color: #4c4f59;
+}
+.theme-toggle__checkbox:checked ~ label:before {
+  background-color: #292a30;
+}
+.theme-toggle__checkbox:checked ~ label:before, .theme-toggle__checkbox:checked ~ label:after {
+  border-color: #4c4f59;
+}
+.theme-toggle__checkbox:checked ~ main {
+  background-color: #1D1E22;
+}
+.theme-toggle__checkbox:checked ~ main .infinity__outline {
+  stroke: #111214;
+}
+
+.outline-toggle__checkbox:checked ~ main .infinity__outline {
+  opacity: 0;
+}
+
+.label {
+  position: absolute;
+  left: 1rem;
+  padding: 8px 0 0 60px;
+  font-family: "Helvetica", sans-serif;
+  font-size: 0.85rem;
+  color: #636775;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: color 200ms;
+}
+.label.theme-toggle__label {
+  top: 1rem;
+}
+.label.outline-toggle__label {
+  top: 3.5rem;
+}
+.label:before, .label:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 28px;
+  background-color: #fafafa;
+  border: 1px solid #d9d9d9;
+  border-radius: 360px;
+  transition: background-color 200ms, -webkit-transform 200ms;
+  transition: background-color 200ms, transform 200ms;
+  transition: background-color 200ms, transform 200ms, -webkit-transform 200ms;
+}
+.label:after {
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  background-color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 4px;
+}
+
+.infinity {
+  position: absolute;
+  width: 100%;
+  max-width: 800px;
+}
+.infinity path {
+  fill: none;
+  stroke-width: 10;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.infinity__outline {
+  stroke: #f2f2f2;
+  -webkit-animation: hover 4000ms linear infinite;
+          animation: hover 4000ms linear infinite;
+  transition: opacity 600ms;
+}
+
+.infinity__tracer {
+  stroke-linecap: round;
+  opacity: 0.8;
+  animation: tracer 1000ms linear reverse infinite;
+}
+.infinity__tracer--1 {
+  stroke: #F38181;
+  -webkit-animation-duration: 6000ms;
+          animation-duration: 6000ms;
+  -webkit-animation-delay: -3960ms;
+          animation-delay: -3960ms;
+}
+.infinity__tracer--2 {
+  stroke: #FCE38A;
+  -webkit-animation-duration: 3000ms;
+          animation-duration: 3000ms;
+  -webkit-animation-delay: -1980ms;
+          animation-delay: -1980ms;
+}
+.infinity__tracer--3 {
+  stroke: #E23E57;
+  -webkit-animation-duration: 2000ms;
+          animation-duration: 2000ms;
+  -webkit-animation-delay: -1320ms;
+          animation-delay: -1320ms;
+}
+.infinity__tracer--4 {
+  stroke: #95E1D3;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+  -webkit-animation-delay: -990ms;
+          animation-delay: -990ms;
+}
+.infinity__tracer--5 {
+  stroke: #FFC4D0;
+  -webkit-animation-duration: 1200ms;
+          animation-duration: 1200ms;
+  -webkit-animation-delay: -792ms;
+          animation-delay: -792ms;
+}
+.infinity__tracer--6 {
+  stroke: #00DFFC;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-delay: -660ms;
+          animation-delay: -660ms;
+}
+
+@-webkit-keyframes tracer {
+  0% {
+    stroke-dasharray: 0, 260;
+    stroke-dashoffset: -234;
+  }
+  25% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  50% {
+    stroke-dasharray: 43.3333333333, 260;
+    stroke-dashoffset: -78;
+  }
+  65% {
+    -webkit-transform: translateX(2px, -2px);
+            transform: translateX(2px, -2px);
+  }
+  100% {
+    stroke-dasharray: 4, 260;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes tracer {
+  0% {
+    stroke-dasharray: 0, 260;
+    stroke-dashoffset: -234;
+  }
+  25% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  50% {
+    stroke-dasharray: 43.3333333333, 260;
+    stroke-dashoffset: -78;
+  }
+  65% {
+    -webkit-transform: translateX(2px, -2px);
+            transform: translateX(2px, -2px);
+  }
+  100% {
+    stroke-dasharray: 4, 260;
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes hover {
+  50% {
+    -webkit-transform: translateY(2px) scale(1.02);
+            transform: translateY(2px) scale(1.02);
+  }
+}
+@keyframes hover {
+  50% {
+    -webkit-transform: translateY(2px) scale(1.02);
+            transform: translateY(2px) scale(1.02);
+  }
+}
+.thumbnail a>img, .thumbnail>img {
+    margin-right: auto;
+    margin-left: auto;
+    background: black;
+}
+.thumbnail {
+    padding: 0;
+    margin-bottom: 0;
+    background-color: #fff;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+	border:0px;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 0px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 0px solid #ddd;
+}
+.table-responsive {
+    border: 0px solid #ddd;
+}
+	</style>
+</head>
+
+<body id="top">
+
+	<!-- header 
+   ================================================== -->
+	<header>
+
+		<div class="row">
+			<div class="">
+				<a href="index.html"><img src="./images/logo.png" id="media"></a>
+			</div>
+
+			<div class="social-links">
+				<ul>
+					<!-- <li><button type="button" class="btn btn-outline-success btn-sm" style="letter-spacing: 0rem; width: 40%" >Sign Up</button></li> -->
+					<li><a href="https://www.facebook.com/psginfinity/"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="https://www.instagram.com/infinity_psg_2020/"><i class="fa fa-instagram"></i></a></li>
+				</ul>
+			</div>
+		</div>
+
+	</header> <!-- /header -->
+
+	<!-- home
+   ================================================== -->
+	<section id="home" class="home-particles">
+
+		<div class="shadow-overlay"></div>
+
+		<div class="content-wrap-table">
+
+			<div class="main-content-tablecell">
+
+				<div class="row">
+					<div class="col-twelve">
+
+						<div id="counter">
+							<?xml version="1.0" encoding="utf-8"?>
+							<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+							<svg version="1.1" id="textx" xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1080"
+								style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+								<style type="text/css">
+									.st0 {
+										fill: #ffffff;
+										stroke: #ffffff;
+										stroke-width: 6;
+										stroke-linecap: round;
+										stroke-miterlimit: 10;
+									}
+
+									.st1 {
+										fill: #ffffff;
+									}
+								</style>
+								<g>
+									<g>
+										<path class="st0" d="M479.12,453.28v170.73h-26.91V453.28H479.12z" />
+										<path class="st0" d="M528.16,624.02V453.28h29.43l66.39,86.29c15.15,20.03,27.19,37.97,36.98,55.59l0.68-0.27
+								  c-2.43-22.79-2.92-43.61-2.92-70.06v-71.56h25.21v170.73h-27.19l-65.88-86.54c-14.27-19.13-28.21-38.6-38.56-57.17l-0.92,0.27
+								  c1.6,21.63,1.97,42.21,1.97,70.43v73.01H528.16z" />
+										<path class="st0"
+											d="M732.96,453.28h111.63v18.37h-84.72v56.85h78.28v18.25h-78.28v77.26h-26.91V453.28z" />
+										<path class="st0" d="M912.08,453.28v170.73h-26.91V453.28H912.08z" />
+										<path class="st0" d="M961.12,624.02V453.28h29.43l66.39,86.29c15.15,20.03,27.19,37.97,36.98,55.59l0.68-0.27
+								  c-2.43-22.79-2.92-43.61-2.92-70.06v-71.56h25.21v170.73h-27.19l-65.88-86.54c-14.27-19.13-28.21-38.6-38.56-57.17l-0.92,0.27
+								  c1.6,21.63,1.97,42.21,1.97,70.43v73.01H961.12z" />
+										<path class="st0" d="M1192.83,453.28v170.73h-26.91V453.28H1192.83z" />
+										<path class="st0"
+											d="M1281.43,471.91h-63.14v-18.63h153.48v18.63h-63.44v152.1h-26.91V471.91z" />
+										<path class="st0" d="M1443.53,624.02v-72.37l-65.72-98.36h30.65l29.11,47.16c7.89,12.94,14.24,23.28,20.6,35.23h0.61
+								  c5.71-11.23,12.79-22.41,20.79-35.36l29.89-47.03h30.33l-69.36,98.02v72.71H1443.53z" />
+									</g>
+								</g>
+								<rect x="1604.2" y="374.87" class="st1" width="2.82" height="1.41" />
+							</svg>
+						</div>
+
+
+					</div> <!-- /twelve -->
+
+					<div class="scroll-icon">
+
+						<p class="scroll-text">Scroll For More Info</p>
+						<a href="#info" class="smoothscroll">
+							<div class="mouse"></div>
+						</a>
+						<div class="end-top"></div>
+
+					</div> <!-- /scroll-icon -->
+				</div> <!-- /row -->
+
+			</div> <!-- /main-content -->
+
+		</div> <!-- /content-wrap -->
+
+	</section> <!-- /home -->
+
+
+	<!-- info
+   ================================================== -->
+	<section id="info">
+
+		<div class="info-overlay"></div>
+
+		<div class="row">
+			<div class="col-twelve tabs-wrap">
+
+				<div class="tab-container">
+
+					<!-- tab content - about
+   				================================================== -->
+					<div id="tab-about" class="tab-content">
+
+						<div class="tab-entry">
+
+							<div class="row tab-entry-intro">
+								<div class="col-twelve with-bottom-line">
+
+									<h1 style="color:white">About Us</h1>
+
+									<p class="lead" align="justify">
+										<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+											xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+											viewBox="0 0 1930 255.5" style="enable-background:new 0 0 1930 255.5;"
+											xml:space="preserve">
+											<style type="text/css">
+												.underline {
+
+													stroke: white;
+													stroke-width: 10;
+													stroke-linecap: square;
+													stroke-miterlimit: 10;
+												}
+											</style>
+											<polyline class="underline" points="1224,171.8 1181.3,171.8 1139.2,129.6 1065,203.9 970.5,110.4 876,203.6 801.8,129.4 759.7,171.5 
+												717,171.5 "></polyline>
+											<polyline class="underline" points="5,131.5 757.3,131.5 801.8,176.1 885.9,91.9 868.3,74.2 831.5,111 870.4,149.9 970.2,50.2 1070,149.9 
+												1108.8,111 1072.1,74.2 1054.4,91.9 1138.5,176.1 1183.1,131.5 1925,131.5 "></polyline>
+											<rect x="921.9" y="26.7"
+												transform="matrix(0.7071 -0.7071 0.7071 0.7071 231.426 707.2043)"
+												class="underline" width="95" height="95"></rect>
+											<rect x="921.9" y="99.7"
+												transform="matrix(0.7071 -0.7071 0.7071 0.7071 179.8072 728.5855)"
+												class="underline" width="95" height="95"></rect>
+											<rect x="940.3" y="178.1"
+												transform="matrix(0.7071 -0.7071 0.7071 0.7071 137.3893 746.1556)"
+												class="underline" width="58.2" height="58.2"></rect>
+										</svg>
+										<span style="text-weight:bold;color:white;">
+											The second edition of Infinity an intra-college technical symposium is
+											proudly
+											presented by the Computational Sciences Association, Department of Applied
+											Mathematics and Computational Sciences, PSG College of Technology on "13<sup>th</sup>,
+											14<sup>th</sup>
+											and 15<sup>th</sup> February 2020". The symposium is filled with six exciting events
+											for
+											the first and second years of all B.E/B.Tech/B.Sc/M.Sc/MCA programmes.
+											<br>
+											<br>
+											Infinity brings the most significant platform for upbringing technical and
+											non-technical skills of the first and second-year techies by providing them
+											the
+											key opportunity to showcase out-breaking talents in various events. We come
+											up
+											with events that are drafted to let out the team spirit, leadership
+											capability
+											and the desire to innovate.
+											<br>
+										</span>
+									</p>
+
+								</div>
+							</div> <!-- /tab-content-intro -->
+
+							<div class="row about-content tab-entry-content">
+								<h1 style="color:white">Our Events</h1>
+
+									<p class="lead" align="justify">
+										<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+											xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+											viewBox="0 0 1930 255.5" style="enable-background:new 0 0 1930 255.5;"
+											xml:space="preserve">
+											<style type="text/css">
+												.underline {
+
+													stroke: white;
+													stroke-width: 10;
+													stroke-linecap: square;
+													stroke-miterlimit: 10;
+												}
+											</style>
+											<polyline class="underline" points="1224,171.8 1181.3,171.8 1139.2,129.6 1065,203.9 970.5,110.4 876,203.6 801.8,129.4 759.7,171.5 
+												717,171.5 "></polyline>
+											<polyline class="underline" points="5,131.5 757.3,131.5 801.8,176.1 885.9,91.9 868.3,74.2 831.5,111 870.4,149.9 970.2,50.2 1070,149.9 
+												1108.8,111 1072.1,74.2 1054.4,91.9 1138.5,176.1 1183.1,131.5 1925,131.5 "></polyline>
+											<rect x="921.9" y="26.7"
+												transform="matrix(0.7071 -0.7071 0.7071 0.7071 231.426 707.2043)"
+												class="underline" width="95" height="95"></rect>
+											<rect x="921.9" y="99.7"
+												transform="matrix(0.7071 -0.7071 0.7071 0.7071 179.8072 728.5855)"
+												class="underline" width="95" height="95"></rect>
+											<rect x="940.3" y="178.1"
+												transform="matrix(0.7071 -0.7071 0.7071 0.7071 137.3893 746.1556)"
+												class="underline" width="58.2" height="58.2"></rect>
+										</svg>
+
+								<div class="about-list block-1-3 block-s-1-2 block-tab-full">
+
+									<div class="bgrid item">
+
+										<span class="icon">
+											<br><br>
+											<img src="images/prozone.png" />
+										</span>
+
+										<div class="item-content">
+
+											<h3 class="h05" style="font-family:Serif">Prozone</h3>
+											<p><b>FOR EVERY BIT OF CODER IN YOU!</b></p>
+											<p align="justify">Just another coding contest, with some twists and turns. We have three rounds. Code through the first two rounds without actual coding and code as much as you want to in the third one.<br>A team can consist of at most two members.<br>
+											<i>Timing: 13<sup>th</sup> February 4:30pm to 5:30pm</i>
+											</p>
+
+										</div>
+
+									</div> <!-- /bgrid -->
+
+									<div class="bgrid item">
+
+										<span class="icon">
+											<img src="images/inklinglogo.png" />
+										</span>
+
+										<div class="item-content">
+											<h3 class="h05" style="font-family:Serif">Inkling</h3>
+
+											<p><b>UNLOCK KNOWLEDGE AT THE SPEED OF THOUGHTS</b></p>
+											<p align="justify">Refresh your intelligence and work yourself on allusion where you get Technical and innovative questions that represents a simple answer.<br>
+												Team should contain 2 members.<br>
+												<i>Timing: 13<sup>th</sup> February 5:30pm to 6:15pm</i>
+											</p>
+
+
+										</div>
+
+									</div> <!-- /bgrid -->
+
+									<div class="bgrid item">
+
+										<span class="icon">
+											<img src="images/Incognitologo.png" />
+										</span>
+
+										<div class="item-content">
+											<h3 class="h05" style="font-family:Serif">Incognito</h3>
+
+											<p><b>BEAT THE CLOCK AND TEAR THE CLOAK</b></p>
+											<p align="justify">Incognito aims to instill a desire for analytical expertise, rational thinking, logical thought process and astute decision-making.Skim, scan, read, flip through and get at most out of google. Dive in as duo, together you can witness the venture.<br>
+												<i>Timing: 14<sup>th</sup> February 4:30pm to 6:00pm</i>
+											</p>
+
+
+										</div>
+
+									</div> <!-- /bgrid -->
+
+									<div class="bgrid item">
+
+										<span class="icon">
+											<img src="images/fuzzlelogo.png" />
+										</span>
+
+										<div class="item-content">
+											<h3 class="h05" style="font-family:Serif">Fuzzle-Buzzle</h3>
+
+											<p><b>MAKE YOUR SKILLS WIN OVER THE RUNNING CLOCK!</b></p>
+											<p align="justify">Are you tired of codes and compilers? Here’s a completely fun-filled event for you! All you need is the urge to show you up. We test your spontaneity and how well you manage your time.<br>
+												<i>Timing: 15<sup>th</sup> February 9:00am to 12:30pm</i>
+											</p>
+
+
+										</div>
+
+									</div> <!-- /bgrid -->
+
+									<div class="bgrid item">
+
+										<span class="icon">
+											<img src="images/gamaholixlogo.png" />
+										</span>
+
+										<div class="item-content">
+											<h3 class="h05" style="font-family:Serif">Gamoholix</h3>
+											<p><b>MARK OF A PROFESSIONAL GAMER</b></p>
+											<p align="justify">It’s not gonna be easy, but it’s worth it.
+											<br>PUBG - Team should contain 4 members.<br>NFS - Single player.
+											<br><i>Timing: 15<sup>th</sup> February 1:30pm to 3:30pm</i></p>
+
+										</div>
+
+									</div> <!-- /bgrid -->
+
+									<div class="bgrid item">
+
+										<span class="icon">
+											<img src="images/TECH RUSH logo.png" />
+										</span>
+
+										<div class="item-content">
+											<h3 class="h05" style="font-family:Serif">Tech Rush</h3>
+											<p><b>SCAN BETWEEN EVERY BLINK</b></p>
+											<p align="justify">All you have to do is code, but without typing. Hunt, Scan, and Chase all the chunks. Here your spontaneity matters more than your syntax.
+											<br>One round, one winner. The fastest wins.
+											<br><i>Timing: 15<sup>th</sup> February 1:30pm to 3:30pm</i>
+											</p>
+
+										</div>
+
+									</div> <!-- /bgrid -->
+
+								</div> <!-- /about-list -->
+
+							</div> <!-- /row about-content -->
+
+						</div> <!-- /tab-entry -->
+
+					</div> <!-- /tab-about -->
+
+
+					<!-- tab content contact
+   				================================================== -->
+
+
+					<!-- tab content - subscribe
+   				================================================== -->
+
+
+				</div> <!-- twelve -->
+			</div> <!-- row -->
+
+	</section> <!-- /info -->
+
+
+	<!-- CTA Section
+   ================================================== -->
+	<section id="cta">
+	<h1><font color='white'>Our Sponsors</font></h1>
+		<div class="row cta-wrap">
+		<div class="">
+				<table class="table table-light table-responsive">
+  <tr>
+    <td colspan="3"><a href="https://www.qikink.com"><img src="images/qui.png"></a></td>
+  </tr>
+  <tr>
+    <td><img src="images/Spinova.png"></td>
+  </tr>
+</table>
+ 
+		</div>
+		<br>
+		<br>
+			<div class="col-twelve cta-content">
+				<h2 class="h01"><a href="">Register Now!</a></h2>
+
+				<p class="lead">
+					
+				</p>
+
+				<div class="action">
+					<a class="button large" href="http://ec2-13-232-148-185.ap-south-1.compute.amazonaws.com/">Sign In / Sign Up</a>
+				</div>
+
+			</div>
+
+		</div> <!-- /cta-content -->
+
+	</section> <!-- /cta -->
+
+
+	<!-- footer
+   ================================================== -->
+	<footer>
+
+		<div class="social-wrap">
+			<div class="row">
+
+				<ul class="footer-social-list">
+					<li><a href="https://www.facebook.com/psginfinity/">
+							<i class="fa fa-facebook"></i><span>Facebook</span>
+						</a></li>
+					<li><a href="https://www.instagram.com/infinity_psg_2020/">
+							<i class="fa fa-instagram"></i><span>Instagram</span>
+						</a></li>
+				</ul>
+
+			</div> <!-- /row -->
+		 <!-- /social-wrap -->
+
+		<div class="footer-bottom">
+
+			<div class="footer-logo">
+				<img src="images/footer-logo.png" alt="">
+			</div>
+
+			<div class="copyright">
+				<p><span>© Copyright Psg-Infinity</span><p>
+			</div>
+
+		</div> <!-- /footer-bottom -->
+		</div>
+		<div class="back-to-top">
+			<a href="#top" class="smoothscroll"><span>Back to Top</span></a>
+		</div>
+
+	</footer>
+
+	<div id="preloader">
+		<div id="loader1">
+			<main class="page-content" style="background-color:#030507;">
+<svg class="infinity" version="1.1" x="0px" y="0px" viewBox="0 0 187.3 93.7" preserveAspectRatio="xMidyMid" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path class="infinity__outline" style="opacity: 0;color: white" d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
+<path class="infinity__tracer infinity__tracer--1" d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
+<path class="infinity__tracer infinity__tracer--2" d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
+<path class="infinity__tracer infinity__tracer--3" d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
+<path class="infinity__tracer infinity__tracer--4" d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
+<path class="infinity__tracer infinity__tracer--5" d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
+<path class="infinity__tracer infinity__tracer--6" d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
+</svg>
+</main>
+
+		</div>    
+	</div>
+
+	<!-- Java Script
+   ================================================== -->
+	<script src="js/jquery-2.1.3.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
